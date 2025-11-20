@@ -50,14 +50,19 @@ export function useMintDataset(options?: {
       const beforeSupply = Number(beforeRes.data ?? 0);
       console.log("📌 Token supply before:", beforeSupply);
 
+      console.log("📡 MetaMask chainId:", await window.ethereum.request({ method: "eth_chainId" }));
+
       // --- 2️⃣ Send TX (WITH chainId) ---
-      const txHash = await writeContractAsync({
-        chainId: westendAssetHub.id,   // 👈 FIXED: REQUIRED FOR ASSET HUB
-        address: DATASET_NFT_ADDRESS,
-        abi: DatasetNFTAbi,
-        functionName: "mint",
-        args: [cid],
-      });
+const txHash = await writeContractAsync({
+  chainId: westendAssetHub.id,
+  address: DATASET_NFT_ADDRESS,
+  abi: DatasetNFTAbi,
+  functionName: "mint",
+  args: [cid],
+  gas: 3_000_000n,          // 👈 REQUIRED
+  gasPrice: 1_000_000_000n, // 👈 REQUIRED
+  value: 0n,                // 👈 ALWAYS for nonpayable
+});
 
       console.log("📨 TX Sent:", txHash);
       setHash(txHash);

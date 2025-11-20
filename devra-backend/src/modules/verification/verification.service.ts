@@ -12,7 +12,7 @@ interface VerificationResponse {
 
 @Injectable()
 export class VerificationService {
-  private readonly aiVerificationUrl = 'https://devra-ai-verifier-v3.onrender.com/verify'; // FastAPI endpoint
+  private readonly aiVerificationUrl = 'http://localhost:8000/verify'; // FastAPI endpoint
 
   async verifyDataset(
     file: Express.Multer.File,
