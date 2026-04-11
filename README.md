@@ -1,3 +1,4 @@
+[![Devra Demo](https://img.youtube.com/vi/_MowrvcabKM/maxresdefault.jpg)](https://www.youtube.com/watch?v=_MowrvcabKM)
 # Devra - Decentralized Data Marketplace
 
 ![Devra Banner](https://img.shields.io/badge/Blockchain-Polkadot-E6007A?style=for-the-badge&logo=polkadot) ![Next.js](https://img.shields.io/badge/Next.js-15.5.5-black?style=for-the-badge&logo=next.js) ![Solidity](https://img.shields.io/badge/Solidity-0.8.28-363636?style=for-the-badge&logo=solidity) ![NestJS](https://img.shields.io/badge/NestJS-11.0.1-E0234E?style=for-the-badge&logo=nestjs)
